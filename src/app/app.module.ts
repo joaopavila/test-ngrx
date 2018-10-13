@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
-import { CounterNgrxModule } from './counter-ngrx/counter-ngrx.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AppStoreModule } from './store/app-store.module';
 
 @NgModule({
   declarations: [
@@ -11,8 +11,8 @@ import { CounterNgrxModule } from './counter-ngrx/counter-ngrx.module';
   ],
   imports: [
     BrowserModule,
-    StoreDevtoolsModule.instrument({ maxAge: 50 }),
-    CounterNgrxModule
+    AppRoutingModule,
+    AppStoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

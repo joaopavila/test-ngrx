@@ -6,12 +6,14 @@ import { StoreModule } from '@ngrx/store';
 
 import { counterReducer } from './store/counter.reducer';
 import { SharedModule } from '../shared/shared.module';
+import { CounterNgrxRoutingModule } from './counter-ngrx-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule,
-    StoreModule.forRoot({counter: counterReducer})
+    CounterNgrxRoutingModule,
+    StoreModule.forFeature('counter', counterReducer),
+    SharedModule
   ],
   declarations: [CounterComponent],
   exports: [StoreModule, CounterComponent]

@@ -5,7 +5,6 @@ import * as counterApp from '../store/counter.action';
 import { AppState } from '../store/counter.state';
 import { Observable } from 'rxjs';
 
-
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
